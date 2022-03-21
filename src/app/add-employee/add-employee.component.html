@@ -1,0 +1,24 @@
+<div style="width : 400px ;" [hidden]="submitted">
+<form (ngSubmit)="onSubmit()">
+<div class ="form-group">
+<label>Firstname</label>
+<input id="firstName"  name="firsttName" type="text" class="form-control" required [(ngModel)]="employee.firstName"/>
+
+</div>
+
+<div class ="form-group">
+    <label>Last Name</label>
+    <input id="lasttName" name="lasttName" type="text" class="form-control" required [(ngModel)]="employee.lastName"/>
+  
+    </div>
+    <div class ="form-group">
+        <label>Email</label>
+        <input id="email" name="email"  type="text" class="form-control" required [(ngModel)]="employee.email"/>
+        </div>
+
+        <button type="submit" class="btn btn-success" value ="submit">Ajouter</button>
+    </form>
+</div>
+<div [hidden]="!submitted">
+<h4>elemnet ajouté avec succes</h4>
+</div>
