@@ -10,6 +10,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { DetailEmployeeComponent } from './detail-employee/detail-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
+import { EmployeeSearchFormComponent } from './employee-search-form/employee-search-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms';
     ListEmployeeComponent,
     AddEmployeeComponent,
     DetailEmployeeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    SearchComponent,
+    EmployeeSearchFormComponent
   ],
   imports: [
     BrowserModule,

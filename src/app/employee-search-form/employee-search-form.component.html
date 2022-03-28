@@ -1,0 +1,18 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <div class="form-group">
+          <label for="id">Employee Id</label>
+          <input type="text" [(ngModel)]="employee.id"
+                 class="form-control" id="name" name="id" placeholder="Enter Employee Id to be searched"
+                 required #name="ngModel">
+        </div>
+        <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="employees.length != 0" >
+      <div class="card my-5">
+        <app-list-employee [employees]="employees"></app-list-employee>
+      </div>
+    </div>
+  </div>

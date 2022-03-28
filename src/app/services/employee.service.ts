@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Employee } from '../employee.model';
 
 @Injectable({
   providedIn: 'root'
@@ -35,4 +36,14 @@ getEmployeeList () : Observable <any>
 {
   return this.http.get(`${this.baseUrl}`);
 } 
+
+findByName(firstName: any): Observable<Employee[]> {
+  return this.http.get<Employee[]>(`${this.baseUrl}/search/${firstName}`);
+}
+
+public findById(employeeId : number )
+{
+  return this.http.get<Employee>(`${this.baseUrl}/${employeeId}`);
+}
+
 }

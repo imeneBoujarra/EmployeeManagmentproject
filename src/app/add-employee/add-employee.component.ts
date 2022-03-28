@@ -29,7 +29,7 @@ export class AddEmployeeComponent implements OnInit {
 
   }
   goToList() {
-   this.router.navigate(['/employees']);
+   this.router.navigate(['employees']);
   }
 
   onSubmit()

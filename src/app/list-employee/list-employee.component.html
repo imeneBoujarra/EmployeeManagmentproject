@@ -1,4 +1,7 @@
-
+<div class="right-search-menu">
+    <input type="text" name="Name" placeholder="Name" [(ngModel)]="name" />
+    <button class="btn btn-secondary btn-sm" (click)="searchName()"name="search">Search</button>
+  </div>
 <div class="panel panel-prinary">
     <div class="panel-heading">
         <h2>Employee List</h2>
@@ -20,12 +23,12 @@
                     <td>{{employee.firstName}}</td>
                     <td>{{employee.lastName}}</td>
                     <td>{{employee.email}}</td>
-              <!---      <td>
-                        <button (click)="deleteEmployee(employee. id)" class="btn btn-danger">Delete</button>
-                        <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px" >update></button>
-                        <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px"> Details></button>
+                  <td>
+                         <button (click)="deleteEmployee(employee. id)" class="btn btn-danger">Delete</button>
+                       <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px" >update</button>
+                        <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px"> Details</button>
                     
-                    </td>-->
+                    </td>
                 </tr>
             </tbody>
         </table>
